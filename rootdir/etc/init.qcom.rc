@@ -300,10 +300,6 @@ on post-fs-data
     mkdir /data/vendor/port_bridge 0770 radio radio
     chmod 0770 /data/vendor/port_bridge
 
-    #create ipacm log dir
-    mkdir /data/vendor/ipa 0770 radio radio
-    chmod 0770 /data/vendor/ipa
-
     # Create the directories used by CnE subsystem
     mkdir /data/vendor/connectivity 0771 radio radio
     chown radio radio /data/vendor/connectivity
@@ -657,18 +653,6 @@ service vendor.ipacm-diag /vendor/bin/ipacm-diag
     user radio
     socket ipacm_log_file dgram 660 radio radio
     group radio diag oem_2901
-    disabled
-
-service vendor.ipacm /vendor/bin/ipacm
-    class main
-    user radio
-    group radio inet
-    disabled
-
-service vendor.dataadpl /vendor/bin/adpl
-    class main
-    user radio
-    group radio oem_2901 diag usb net_admin
     disabled
 
 service vendor.sensors /vendor/bin/sscrpcd
