@@ -669,13 +669,6 @@ service qmiproxy /system/bin/qmiproxy
     group radio diag
     disabled
 
-# QMUX must be in multiple groups to support external process connections
-service vendor.qmuxd /vendor/bin/qmuxd
-    class main
-    user root
-    group radio audio bluetooth gps nfc diag
-    disabled
-
 service vendor.netmgrd /vendor/bin/netmgrd
     class main
     disabled
@@ -885,11 +878,11 @@ service iprenew_bt-pan /system/bin/dhcpcd -n
     disabled
     oneshot
 
-service ssgtzd /vendor/bin/ssgtzd
+service ssgqmigd /vendor/bin/ssgqmigd
     class late_start
-    user system
-    group system
-    socket ssgtzd stream 0660 system inet
+    user radio
+    group radio gps system
+    socket ssgqmig seqpacket 0660 radio inet
     disabled
 
 service loc_launcher /vendor/bin/loc_launcher
