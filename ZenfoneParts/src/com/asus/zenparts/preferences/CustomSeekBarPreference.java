@@ -1,19 +1,3 @@
-/*
- * Copyright (C) 2016-2019 crDroid Android Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License
- */
-
 package com.asus.zenparts.preferences;
 
 import android.content.Context;
@@ -36,7 +20,7 @@ import com.asus.zenparts.R;
 public class CustomSeekBarPreference extends Preference implements SeekBar.OnSeekBarChangeListener,
         View.OnClickListener, View.OnLongClickListener {
     protected final String TAG = getClass().getName();
-    private static final String APP_NS = "http://schemas.android.com/apk/res-auto";
+    private static final String SETTINGS_NS = "http://schemas.android.com/apk/res/com.android.settings";
     protected static final String ANDROIDNS = "http://schemas.android.com/apk/res/android";
 
     protected int mInterval = 1;
@@ -44,8 +28,8 @@ public class CustomSeekBarPreference extends Preference implements SeekBar.OnSee
     protected String mUnits = "";
     protected boolean mContinuousUpdates = false;
 
-    protected int mMinValue = 1;
-    protected int mMaxValue = 256;
+    protected int mMinValue = 0;
+    protected int mMaxValue = 100;
     protected boolean mDefaultValueExists = false;
     protected int mDefaultValue;
 
@@ -75,13 +59,13 @@ public class CustomSeekBarPreference extends Preference implements SeekBar.OnSee
         }
 
         try {
-            String newInterval = attrs.getAttributeValue(APP_NS, "interval");
+            String newInterval = attrs.getAttributeValue(SETTINGS_NS, "interval");
             if (newInterval != null)
                 mInterval = Integer.parseInt(newInterval);
         } catch (Exception e) {
             Log.e(TAG, "Invalid interval value", e);
         }
-        mMinValue = attrs.getAttributeIntValue(APP_NS, "min", mMinValue);
+        mMinValue = attrs.getAttributeIntValue(SETTINGS_NS, "min", mMinValue);
         mMaxValue = attrs.getAttributeIntValue(ANDROIDNS, "max", mMaxValue);
         if (mMaxValue < mMinValue)
             mMaxValue = mMinValue;

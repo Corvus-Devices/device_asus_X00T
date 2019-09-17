@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory
+        android:key="vibration"
+        android:title="@string/vibration_title">
+
+        <com.asus.zenparts.preferences.VibrationSeekBarPreference
+            android:defaultValue="80"
+            android:key="vibration_strength"
+            android:max="100"
+            android:title="@string/vibration_strength_title"
+            app:min="1"
+            app:units="%" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="display"
+        android:title="@string/display_title">
+
+        <Preference
+            android:key="device_kcal"
+            android:persistent="false"
+            android:title="@string/device_kcal_title">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.asus.zenparts.kcal.KCalSettingsActivity"
+                android:targetPackage="com.asus.zenparts.kcal" />
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="audio"
+        android:title="@string/audio_title">
+
+        <com.asus.zenparts.preferences.CustomSeekBarPreference
+            android:defaultValue="2"
+            android:key="headphone_gain"
+            android:max="20"
+            app:min="-40"
+            android:title="@string/headphone_gain" />
+
+        <com.asus.zenparts.preferences.CustomSeekBarPreference
+            android:defaultValue="0"
+            android:key="microphone_gain"
+            android:max="20"
+            app:min="-10"
+            android:title="@string/microphone_gain" />
+    </PreferenceCategory>
+</PreferenceScreen>
