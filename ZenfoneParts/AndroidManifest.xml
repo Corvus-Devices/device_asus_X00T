@@ -3,11 +3,19 @@
     package="com.asus.zenparts"
     android:sharedUserId="android.uid.system">
 
+    <uses-permission android:name="android.permission.INJECT_EVENTS"/>
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <uses-sdk android:minSdkVersion="27" />
+
+    <protected-broadcast android:name="com.android.systemui.doze.pulse" />
+    <protected-broadcast android:name="com.asus.zenparts.CUST_UPDATE" 
+/>
 
     <application
         android:label="@string/zenparts_title"
@@ -27,6 +35,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
+        </receiver>
+
+        <receiver android:name=".BootReceiverGesture" >
+          <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
+          </intent-filter>
         </receiver>
 
         <activity
@@ -51,6 +66,37 @@
                 android:name="com.android.settings.summary"
                 android:resource="@string/zenparts_settings_summary" />
         </activity>
+
+        <activity
+            android:name=".zenmotions.ScreenOffGestureSettings"
+            android:label="@string/screen_off_gestures">
+          <intent-filter>
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+          </intent-filter>
+        </activity>
+
+        <service android:name="com.asus.zenparts.ambient.SensorsDozeService"
+                 android:permission="SensorsDozeService">
+        </service>
+
+        <activity
+            android:name="com.asus.zenparts.ambient.AmbientGesturePreferenceActivity"
+            android:label="@string/ambient_display_gestures_title">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".ZenpartsTile"
+            android:enabled="true"
+            android:icon="@drawable/qs_asus"
+            android:label="@string/zenparts_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
 
         <activity
             android:name=".kcal.KCalSettingsActivity"
