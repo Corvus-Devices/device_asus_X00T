@@ -41,25 +41,6 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-         android:title="@string/gestures">
-
-        <PreferenceScreen
-            android:key="screen_gestures"
-            android:fragment="com.asus.zenparts.zenmotions.ScreenOffGestureSettings"
-            android:summary="@string/gestures_dashboard_summary"
-            android:icon="@drawable/ic_gestures"
-            android:title="@string/screen_off_gestures"/>
-
-        <PreferenceScreen
-            android:key="ambient_display_gestures"
-            android:fragment="com.asus.zemotions.gestures.AmbientGesturePreferenceActivity"
-            android:summary="@string/ambient_display_gestures_summary"
-            android:icon="@drawable/ic_ambient"
-            android:title="@string/ambient_display_gestures_title"/>
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:key="vibration"
         android:title="@string/vibration_title">
 

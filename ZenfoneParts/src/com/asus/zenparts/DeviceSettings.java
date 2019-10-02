@@ -7,8 +7,6 @@ import android.support.v14.preference.PreferenceFragment;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceCategory;
 
-import com.asus.zenparts.ambient.AmbientGesturePreferenceActivity;
-import com.asus.zenparts.zenmotions.ScreenOffGestureSettings;
 import com.asus.zenparts.kcal.KCalSettingsActivity;
 import com.asus.zenparts.preferences.SecureSettingListPreference;
 import com.asus.zenparts.preferences.SecureSettingSwitchPreference;
@@ -39,9 +37,6 @@ public class DeviceSettings extends PreferenceFragment implements
     private static final String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
             "spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_1/max_brightness";
 
-    private Preference mAmbientPref;
-    private Preference mGesturesPref;
-
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.zenparts_preferences, rootKey);
@@ -69,26 +64,6 @@ public class DeviceSettings extends PreferenceFragment implements
             Intent intent = new Intent(getActivity().getApplicationContext(), KCalSettingsActivity.class);
             startActivity(intent);
             return true;
-        });
-
-        mGesturesPref = findPreference("screen_gestures");
-        mGesturesPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
-                Intent intent = new Intent(getContext(), ScreenOffGestureSettings.class);
-                startActivity(intent);
-                return true;
-            }
-        });
-
-	mAmbientPref = findPreference("ambient_display_gestures");
-        mAmbientPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
-                Intent intent = new Intent(getContext(), AmbientGesturePreferenceActivity.class);
-                startActivity(intent);
-                return true;
-            }
         });
     }
 
