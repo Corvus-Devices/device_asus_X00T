@@ -329,7 +329,6 @@ PRODUCT_PACKAGES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    libaacwrapper \
     libc2dcolorconvert \
     libmm-omxcore \
     libOmxAacEnc \
@@ -490,6 +489,8 @@ PRODUCT_PACKAGES += \
 
 # WFD
 PRODUCT_PACKAGES += \
+    libaacwrapper \
+    libmediaextractorservice \
     libnl
 
 PRODUCT_BOOT_JARS += \
