@@ -15,4 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_X00T.mk
+    $(LOCAL_DIR)/du_X00T.mk
+
+COMMON_LUNCH_CHOICES := \
+    du_X00T-userdebug
