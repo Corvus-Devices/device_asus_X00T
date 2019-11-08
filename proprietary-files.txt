@@ -1087,14 +1087,14 @@ vendor/lib64/libkeymasterutils.so
 vendor/lib/hw/keystore.sdm660.so
 vendor/lib64/hw/keystore.sdm660.so
 
-# Listen
-vendor/lib/hw/sound_trigger.primary.sdm660.so
-vendor/lib/libadpcmdec.so
-vendor/lib/libgcs-calwrapper.so
-vendor/lib/libgcs-ipc.so
-vendor/lib/libgcs-osal.so
-vendor/lib/libgcs.so
-vendor/lib/libsmwrapper.so
+# Listen - from DRG - QKQ1.190828.002
+vendor/lib/hw/sound_trigger.primary.sdm660.so|4b987886ad21686783900e61bd2ee4d82f522934
+vendor/lib/libadpcmdec.so|6e9be864a1380e099a2d68237e13a724f3143314
+vendor/lib/libgcs-calwrapper.so|edcccf23d050944417e2902e32ca0513168791cb
+vendor/lib/libgcs-ipc.so|a4f1f1a848f3ed8634673ef463499bbc7facc445
+vendor/lib/libgcs-osal.so|dfae7d1bb15b7bd19fef7427f0a6f6df28d5d30a
+vendor/lib/libgcs.so|4fa806f2bb8708b341f0cfe3a9609387350ceefb
+vendor/lib/libsmwrapper.so|c12725b40bc853cccbf1f489481892aa5bfb629c
 
 # Media - from DRG - QKQ1.190828.002
 vendor/lib/libAlacSwDec.so|bca4278cb74a63772a0fc369480b5d9814063d9b
