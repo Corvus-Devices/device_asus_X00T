@@ -1,5 +1,4 @@
 typeattribute vendor_init data_between_core_and_vendor_violators;
-set_prop(vendor_init, camera_prop)
 
 allow vendor_init {
   camera_data_file

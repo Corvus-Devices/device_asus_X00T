@@ -4,10 +4,6 @@ persist.vendor.runin.fp            u:object_r:cdfinger_prop:s0
 
 # Audio
 use.audio.eu.parameters            u:object_r:hal_audio_prop:s0
-persist.audio.dirac                u:object_r:dirac_prop:s0
-
-# GPU Stats
-gpu.stats.debug.level               u:object_r:vendor_default_prop:s0
 
 # nvram
 ro.btmac                           u:object_r:nvram_btwifi_prop:s0
