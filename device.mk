@@ -221,11 +221,7 @@ PRODUCT_PACKAGES += \
 
 # GPS / Location
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl-qti \
-    android.hardware.gnss@1.0-service-qti \
     libcurl \
-    libgnss \
-    libgnsspps \
     libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
@@ -464,7 +460,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-	android.hardware.usb@1.0-service.X00T
+    android.hardware.usb@1.0-service.X00T
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
