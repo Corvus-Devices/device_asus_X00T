@@ -906,15 +906,18 @@ vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc
 vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 
-# Factory
--framework/vendor.qti.hardware.factory-V1.0-java.jar
-lib/vendor.qti.hardware.factory@1.0.so
-lib64/vendor.qti.hardware.factory@1.0.so
-vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
-vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc
-vendor/etc/permissions/vendor.qti.hardware.factory.xml
-vendor/lib/hw/vendor.qti.hardware.factory@1.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.factory@1.0-impl.so
+# Factory - from Nokia DRG_sprout 10 QKQ1.190828.002 00WW_4_040 release-keys
+product/framework/vendor.qti.hardware.factory-V1.0-java.jar|0ecc597e18701978179bd54d0d6f701a7a97fce2
+product/framework/vendor.qti.hardware.factory-V1.1-java.jar|d8fa470013d6a0eb2801c3ac556d62ec8bbf1136
+product/lib/vendor.qti.hardware.factory@1.0.so|67e6210bdb6631d440eca59dd200b04f61e5aa72
+product/lib/vendor.qti.hardware.factory@1.1.so|6d53ae40d6d1237ee1a94b53be1043aa20bea021
+product/lib64/vendor.qti.hardware.factory@1.0.so|9dcf75a4877324e4080ac2088e6ca9caed1c777c
+product/lib64/vendor.qti.hardware.factory@1.1.so|882f4c7eee1b8247d503b185c0240d66e974901a
+vendor/bin/hw/vendor.qti.hardware.factory@1.0-service|494ed416072a4a55abc4d93c92cb59a53cf1fca5
+vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc|daef65610527465889f078bb1c29e8a0996819dc
+vendor/etc/permissions/vendor.qti.hardware.factory.xml|bedb01aed43b95943ac60f80cf351742ccb4a072
+vendor/lib64/vendor.qti.hardware.factory@1.0.so|1347d5fb217b2a8801f19bea1f93016edb3ae93a
+vendor/lib64/vendor.qti.hardware.factory@1.1.so|00e090806194349ef6235f985f0bca9b1ed07284
 
 # Fingerprint sensor
 framework/vendor.qti.hardware.fingerprint-V1.0-java.jar
