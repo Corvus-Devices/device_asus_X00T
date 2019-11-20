@@ -257,18 +257,6 @@ service hbtp /vendor/bin/hbtp_daemon
     group system
     disabled
 
-service vendor.cdsprpcd /vendor/bin/cdsprpcd
-   class main
-   user system
-   group system
-   disabled
-
-service vendor.imsqmidaemon /vendor/bin/imsqmidaemon
-    class main
-    user radio
-    socket ims_qmid stream 0660 system radio
-    group radio log diag
-
 service energy-awareness /vendor/bin/energy-awareness
     class main
     user system
