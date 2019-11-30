@@ -197,8 +197,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # QCOM cabl
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qualcomm.cabl=0 \
-    ro.vendor.display.cabl=0
+    ro.qualcomm.cabl=2 \
+    ro.vendor.display.cabl=2
 
 # QTI
 PRODUCT_PROPERTY_OVERRIDES += \
