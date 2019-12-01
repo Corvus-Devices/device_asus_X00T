@@ -179,7 +179,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    vendor.display.config@1.3 \
     copybit.sdm660 \
     gralloc.sdm660 \
     hwcomposer.sdm660 \
@@ -189,7 +188,9 @@ PRODUCT_PACKAGES += \
     libvulkan \
     libtinyxml \
     memtrack.sdm660 \
-    libgenlock
+    libgenlock \
+    vendor.display.config@1.7 \
+    vendor.display.config@1.7.vendor
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
