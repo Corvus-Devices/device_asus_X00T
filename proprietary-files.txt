@@ -123,15 +123,6 @@ vendor/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
 vendor/etc/acdbdata/MTP/MTP_Headset_cal.acdb
 vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
 vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp
-vendor/etc/acdbdata/MTP/sdm660-tavil-snd-card/MTP_WCD9340_Codec_cal.acdb
-vendor/etc/acdbdata/MTP/sdm660-tavil-snd-card/MTP_WCD9340_Speaker_cal.acdb
-vendor/etc/acdbdata/MTP/sdm660-tavil-snd-card/MTP_WCD9340_Hdmi_cal.acdb
-vendor/etc/acdbdata/MTP/sdm660-tavil-snd-card/MTP_WCD9340_Headset_cal.acdb
-vendor/etc/acdbdata/MTP/sdm660-tavil-snd-card/MTP_WCD9340_General_cal.acdb
-vendor/etc/acdbdata/MTP/sdm660-tavil-snd-card/MTP_WCD9340_workspaceFile.qwsp
-vendor/etc/acdbdata/MTP/sdm660-tavil-snd-card/MTP_WCD9340_Global_cal.acdb
-vendor/etc/acdbdata/MTP/sdm660-tavil-snd-card/MTP_WCD9340_Bluetooth_cal.acdb
-vendor/etc/acdbdata/MTP/sdm660-tavil-snd-card/MTP_WCD9340_Handset_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_General_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
@@ -140,30 +131,6 @@ vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_workspaceFile.qwsp
-vendor/etc/acdbdata/QRD/sdm660-tasha-skus-snd-card/QRD_SKUS_Headset_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-tasha-skus-snd-card/QRD_SKUS_Bluetooth_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-tasha-skus-snd-card/QRD_SKUS_Hdmi_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-tasha-skus-snd-card/QRD_SKUS_Handset_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-tasha-skus-snd-card/QRD_SKUS_General_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-tasha-skus-snd-card/QRD_SKUS_workspaceFile.qwsp
-vendor/etc/acdbdata/QRD/sdm660-tasha-skus-snd-card/QRD_SKUS_Global_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-tasha-skus-snd-card/QRD_SKUS_Speaker_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Bluetooth_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Speaker_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Global_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_General_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Handset_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Headset_cal.acdb
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_workspaceFile.qwsp
-vendor/etc/acdbdata/QRD/sdm660-snd-card-skush/QRD_SKUSH_Hdmi_cal.acdb
-vendor/etc/acdbdata/QRD/NonCE/QRD_NonCE_Bluetooth_cal.acdb
-vendor/etc/acdbdata/QRD/NonCE/QRD_NonCE_Global_cal.acdb
-vendor/etc/acdbdata/QRD/NonCE/QRD_NonCE_General_cal.acdb
-vendor/etc/acdbdata/QRD/NonCE/QRD_NonCE_Hdmi_cal.acdb
-vendor/etc/acdbdata/QRD/NonCE/QRD_NonCE_Speaker_cal.acdb
-vendor/etc/acdbdata/QRD/NonCE/QRD_NonCE_workspaceFile.qwsp
-vendor/etc/acdbdata/QRD/NonCE/QRD_NonCE_Headset_cal.acdb
-vendor/etc/acdbdata/QRD/NonCE/QRD_NonCE_Handset_cal.acdb
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # Bluetooth
@@ -1469,12 +1436,14 @@ vendor/bin/wifidisplayhalservice|845b5e359d006ecb3a4c3bd72841be0ff081754d
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc|04e463342cbba4c0e9c311a18238f95dec9359fd
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so|b8c2f8054277b327ec1cc4dafdc727f9e07956f5
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0.so|882569a70daed88c55a717454a98483a9924c533
+vendor/lib/libmmosal_proprietary.so|dfa0b9751df0a52ffd69e00af463ad65f54c01e5
 vendor/lib/libwfdcommonutils_proprietary.so|fefd94630199dbcb8ffc522eb2f02fdeed0ace65
 vendor/lib/libwfdhaldsmanager.so|9411565d99b6340d36d2cbca7f00d136106b21e6
 vendor/lib/libwfdhdcpcp.so|b51d6cd0ed7838200a0fc5e93144a8352922d2a9
 vendor/lib/libwfdmmservice.so|ae4e690dfda60111d3cd61259ccf13a9c562beb2
 vendor/lib/libwfdmodulehdcpsession.so|85c76302658c3bbd9c35ea4d4b2e6ffba08b770e
 vendor/lib64/libwfdhdcpcp.so|03c05652a41db0709effacc6d8cea627fb2492f4
+vendor/lib64/libmmosal_proprietary.so|b8dbc765c15f30dec9f1c0907a25810df1bc9731
 
 # Markup Blobs
 lib64/libsketchology_native.so
