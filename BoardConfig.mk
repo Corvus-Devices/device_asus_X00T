@@ -158,18 +158,6 @@ TARGET_USES_ION := true
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
-# Enable dexpreopt to speed boot time
-ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),eng)
-      WITH_DEXPREOPT := true
-      WITH_DEXPREOPT_DEBUG_INFO := false
-      USE_DEX2OAT_DEBUG := false
-      DONT_DEXPREOPT_PREBUILTS := true
-      WITH_DEXPREOPT_PIC := true
-      WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
-  endif
-endif
-
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
@@ -266,9 +254,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 WIFI_DRIVER_OPERSTATE_PATH := "/sys/class/net/wlan0/operstate"
 WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
-
-# Pre-opt SystemUI
-PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
 
 # inherit from the proprietary version
 -include vendor/asus/X00T/BoardConfigVendor.mk
