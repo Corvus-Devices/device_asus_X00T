@@ -32,7 +32,8 @@
             android:key="device_kcal"
             android:persistent="false"
             android:icon="@drawable/ic_kcal"
-            android:title="@string/device_kcal_title">
+            android:title="@string/device_kcal_title"
+            android:summary="@string/device_kcal_summary" >
             <intent
                 android:action="android.intent.action.MAIN"
                 android:targetClass="com.asus.zenparts.kcal.KCalSettingsActivity"
