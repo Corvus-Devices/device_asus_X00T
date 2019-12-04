@@ -10,6 +10,8 @@ public class VibrationSeekBarPreference extends SecureSettingSeekBarPreference {
 
     private final Vibrator mVibrator;
 
+    private static final long testVibrationPattern[] = {0,250};
+
     public VibrationSeekBarPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         mVibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
@@ -23,5 +25,14 @@ public class VibrationSeekBarPreference extends SecureSettingSeekBarPreference {
     public VibrationSeekBarPreference(Context context) {
         super(context, null);
         mVibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+    }
+
+    private void saveValue(String newValue) {
+        mVibrator.vibrate(testVibrationPattern, -1);
+    }
+
+    @Override
+    protected void changeValue(int newValue) {
+        saveValue(String.valueOf(newValue));
     }
 }
