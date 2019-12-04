@@ -831,6 +831,11 @@ vendor/firmware/novatek_ts_fw_txd.bin
 # Display firmware (Synaptics)
 vendor/firmware/startup_fw_update.img
 
+# Dirac
+vendor/etc/diracmobile.config
+vendor/lib/libDiracAPI_SHARED.so
+vendor/lib/soundfx/libdirac.so
+
 # DPM - from LA.UM.8.2.r1-04300-sdm660.0
 product/bin/dpmd|49caa8e7d8af8055efdd7ebc0d7f7d67bc600041
 product/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
