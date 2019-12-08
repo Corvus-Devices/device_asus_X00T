@@ -3,9 +3,13 @@
     package="com.asus.zenparts"
     android:sharedUserId="android.uid.system">
 
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INJECT_EVENTS"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-sdk android:minSdkVersion="28" />
 
@@ -52,6 +56,17 @@
                 android:resource="@string/zenparts_settings_summary" />
         </activity>
 
+        <activity
+            android:name="com.asus.zenparts.gesture.ScreenOffGestureSettings"
+            android:label="@string/screen_off_gestures">
+          <intent-filter>
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+                <action android:name="android.intent.action.MAIN" />
+          </intent-filter>
+        </activity>
+
+        <activity android:name=".KeyHandler" />
+
         <service
             android:name=".ZenpartsTile"
             android:enabled="true"
@@ -72,5 +87,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <receiver android:name=".Startup" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>

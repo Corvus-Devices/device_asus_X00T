@@ -1,20 +1,27 @@
 package com.asus.zenparts;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.Context;
 import android.os.Bundle;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragment;
 
+import com.asus.zenparts.gesture.ScreenOffGestureSettings;
 import com.asus.zenparts.kcal.KCalSettingsActivity;
 import com.asus.zenparts.preferences.SecureSettingListPreference;
 import com.asus.zenparts.preferences.SecureSettingSwitchPreference;
 import com.asus.zenparts.preferences.VibrationSeekBarPreference;
 import com.asus.zenparts.preferences.CustomSeekBarPreference;
 
+import com.asus.zenparts.R;
+
 public class DeviceSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
+
+    private static final boolean DEBUG = true;
 
     public static final String PREF_VIBRATION_STRENGTH = "vibration_strength";
     public static final String VIBRATION_STRENGTH_PATH = "/sys/devices/virtual/timed_output/vibrator/vtg_level";
@@ -36,6 +43,9 @@ public class DeviceSettings extends PreferenceFragment implements
             "spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0/max_brightness";
     private static final String TORCH_2_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
             "spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_1/max_brightness";
+
+    private Preference mGesturesPref;
+    private Context mContext;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -64,6 +74,17 @@ public class DeviceSettings extends PreferenceFragment implements
             Intent intent = new Intent(getActivity().getApplicationContext(), KCalSettingsActivity.class);
             startActivity(intent);
             return true;
+        });
+
+        mGesturesPref = findPreference("screen_gestures");
+        mGesturesPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+
+        @Override
+        public boolean onPreferenceClick(Preference preference) {
+            Intent intent = new Intent(getContext(), ScreenOffGestureSettings.class);
+            startActivity(intent);
+            return true;
+	    }
         });
     }
 

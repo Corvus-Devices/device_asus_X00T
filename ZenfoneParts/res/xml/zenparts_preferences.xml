@@ -28,6 +28,13 @@
         android:key="display"
         android:title="@string/display_title">
 
+        <PreferenceScreen
+                android:key="screen_gestures"
+                android:fragment="com.asus.zenparts.gesture.ScreenOffGestureSettings"
+                android:summary="@string/gestures_dashboard_summary"
+                android:icon="@drawable/ic_gesture"
+                android:title="@string/screen_off_gestures" />
+
         <Preference
             android:key="device_kcal"
             android:persistent="false"

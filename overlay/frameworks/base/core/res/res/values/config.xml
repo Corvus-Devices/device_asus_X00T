@@ -506,7 +506,11 @@
     <!--AlwaysOnDisplay disabled by default -->
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
 
+    <!-- The list absolute paths of jar/apk files containing the device specific handlers,
+        delimited by File.pathSeparator, which defaults to ":" on Android -->
     <string name="config_alternativeDeviceKeyHandlerLib" translatable="false">/system/priv-app/ZenfoneParts/ZenfoneParts.apk</string>
+    <!-- Full qualified name of the class that implements
+        com.android.internal.os.DeviceKeyHandler interface. -->
     <string name="config_alternativeDeviceKeyHandlerClass" translatable="false">com.asus.zenparts.KeyHandler</string>
 
     <!-- Allow automatic adjusting of the screen brightness while dozing in low power state. -->
