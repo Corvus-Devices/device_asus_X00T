@@ -39,6 +39,14 @@ CLEAN_VENDOR=true
 SECTION=
 KANG=
 
+function blob_fixup() {
+    case "${1}" in
+    vendor/lib/hw/audio.primary.sdm660.so|vendor/lib64/hw/audio.primary.sdm660.so)
+        patchelf --replace-needed "libcutils.so" "libprocessgroup.so" "${2}"
+        ;;
+    esac
+}
+
 while [ "$1" != "" ]; do
     case "$1" in
         -n | --no-cleanup )     CLEAN_VENDOR=false
