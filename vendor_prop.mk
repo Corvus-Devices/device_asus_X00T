@@ -228,7 +228,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=20,20 \
     telephony.lteOnCdmaDevice=1 \
     persist.vendor.radio.procedure_bytes=SKIP \
-    persist.vendor.radio.flexmap_type=none \
     ro.telephony.iwlan_operation_mode=legacy
 
 # Radio Debug Options
