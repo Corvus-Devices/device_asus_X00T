@@ -63,9 +63,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.chg.max_volt_mv=9000
 
-# CNE
+# CNE & DPM
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.cne.feature=1
+    persist.vendor.cne.feature=1 \
+    persist.vendor.dpm.feature=11
 
 # Dalvik overrides
 PRODUCT_PROPERTY_OVERRIDES += \
