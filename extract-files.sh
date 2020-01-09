@@ -108,9 +108,6 @@ patchelf --remove-needed libsoftkeymasterdevice.so "$DEVICE_BLOB_ROOT"/vendor/li
 patchelf --remove-needed libsoftkeymaster.so "$DEVICE_BLOB_ROOT"/vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so
 patchelf --remove-needed libkeymaster_messages.so "$DEVICE_BLOB_ROOT"/vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so
 
-patchelf --remove-needed libandroid.so "$DEVICE_BLOB_ROOT"/vendor/lib/libmpbase.so
-
 fi
 
-DEVICE_BLOB_ROOT="$DU_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
 "${MY_DIR}/setup-makefiles.sh"
