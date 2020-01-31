@@ -99,6 +99,12 @@ PRODUCT_PACKAGES += \
     tinymix.vendor
 
 PRODUCT_PACKAGES += \
+    libsndmonitor \
+    libhdmiedid \
+    liba2dpoffload \
+    libhfp
+
+PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
     android.hardware.audio@2.0-impl \
     android.hardware.audio.effect@2.0-impl \
