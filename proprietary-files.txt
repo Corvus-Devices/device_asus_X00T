@@ -148,7 +148,6 @@ vendor/lib/libarcsoft_dualcam_refocus.so
 vendor/lib/libarcsoft_hdr.so
 vendor/lib/libarcsoft_night_shot.so
 vendor/lib/libarcsoft_picselfie_algorithm.so
-vendor/lib/libcdsprpc.so
 vendor/lib/libdepthmapwrapper.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libhal_dbg.so
@@ -732,6 +731,14 @@ vendor/firmware/cpp_firmware_v1_12_0.fw
 
 # Charger
 vendor/bin/hvdcp_opti
+
+# CDSP
+vendor/bin/cdsprpcd
+vendor/lib64/libcdsprpc.so
+vendor/lib64/libcdsp_default_listener.so
+vendor/lib64/libfastcrc.so
+vendor/lib64/libfastrpc_utf_stub.so
+vendor/lib64/libsysmon_cdsp_skel.so
 
 # CNE
 etc/cne/Nexus/ATT/ATT_profiles.xml
