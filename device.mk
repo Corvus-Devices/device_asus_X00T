@@ -227,9 +227,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
     android.hardware.health@2.0-service
 
-PRODUCT_PACKAGES += \
-    chargeonlymode
-
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
@@ -342,11 +339,8 @@ PRODUCT_PACKAGES += \
     init.qcom.sensors.sh \
     init.qcom.sh \
     init.qcom.usb.sh \
-    init.qcom.ipastart.sh \
     init.qti.ims.sh \
-    move_time_data.sh \
     move_wifi_data.sh \
-    fix_baseband.sh \
     fstab.qcom \
     init.msm.usb.configfs.rc \
     init.qcom.rc \
