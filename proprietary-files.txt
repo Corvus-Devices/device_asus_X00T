@@ -795,18 +795,6 @@ vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
-# Display calibration
-vendor/etc/qdcm_calib_data_nt36672_1080p_video_mode_dsi_panel.xml
-vendor/etc/qdcm_calib_data_nt36672_1080p_video_mode_dsi_txd_panel.xml
-vendor/etc/qdcm_calib_data_td4310_1080p_video_mode_dsi_txd_panel.xml
-
-# Display firmware (Novatek)
-vendor/firmware/novatek_ts_fw_dj.bin
-vendor/firmware/novatek_ts_fw_txd.bin
-
-# Display firmware (Synaptics)
-vendor/firmware/startup_fw_update.img
-
 # DPM - from LA.UM.8.2.r1-04300-sdm660.0
 product/bin/dpmd|49caa8e7d8af8055efdd7ebc0d7f7d67bc600041
 product/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
@@ -928,7 +916,6 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so|073cace3aa8d0ffa025d9df67c45f8a907109
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|a189a50515831e6ac9a7e88a165ac979ae6ac077
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so|eaf70216b4e53f409c22764b272b79cd60a4b714
-vendor/lib64/hw/gatekeeper.sdm660.so|e8f32651e4bfff88fcc02c34eca6cd5f04a444aa
 
 # GPS - from DRG - QKQ1.190828.002
 vendor/bin/garden_app|82ddd3e0888d8d0ee271c451f05047de0ed270f8
@@ -978,7 +965,7 @@ vendor/lib64/vendor.qti.gnss@3.0-service.so|947bfafbf110d70656f434ab5845b6691b6b
 vendor/lib64/vendor.qti.gnss@3.0.so|ff1733d10abd97fa4381c798ae74b4cc5dac39e8
 -vendor/lib64/libloc_api_v02.so|f938e9ef5e072e1ad5c155700137dff028fbeb08
 
-# GPU firmware
+# GPU firmware - WW_Phone-17.2017.1911.407-20191223
 vendor/firmware/a512_zap.b00
 vendor/firmware/a512_zap.b01
 vendor/firmware/a512_zap.b02
@@ -1062,10 +1049,6 @@ vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so|69fd7a9f800da8cb74ae3
 vendor/lib64/libkeymasterdeviceutils.so|763a02841eb133e698180e0cacf309450a4ce0e0
 vendor/lib64/libkeymasterprovision.so|f7e215595c2f7e62a6575b23a109b6b18556fc3b
 vendor/lib64/libkeymasterutils.so|679491d7b415f45469990380e4fd61e4bfbc445e
-
-# Keystore
-vendor/lib/hw/keystore.sdm660.so
-vendor/lib64/hw/keystore.sdm660.so
 
 # Listen - from DRG - QKQ1.190828.002
 vendor/lib/hw/sound_trigger.primary.sdm660.so|4b987886ad21686783900e61bd2ee4d82f522934
@@ -1362,7 +1345,7 @@ vendor/lib64/vendor.qti.imsrtpservice@2.1.so|7b227f1a007619dcae8d541eabe99eb5581
 vendor/lib64/vendor.qti.ims.callinfo@1.0.so|54fc671e0d5ddb10077b7f705fc096a0217a3db9
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|d9299e6d5d18aa4ebfb984772f3111ddcf196044
 
-# Sensors
+# Sensors - WW_Phone-17.2017.1911.407-20191223
 vendor/bin/sensors.qti
 vendor/etc/sensors/sensor_def_qcomdev.conf
 vendor/lib/hw/activity_recognition.sdm660.so
@@ -1385,17 +1368,6 @@ product/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|45fa1c6d3e292d1ca8c2d4
 vendor/lib/sensor_calibrate.so|22c442599a1550e3e9b47d3055c5ac7fabdb29d5
 vendor/lib64/sensor_calibrate.so|efbe09267ad7c1b32be0ebb2fa7b0beec4d27179
 
-# Signed graphics firmware
-vendor/firmware/cppf.b00
-vendor/firmware/cppf.b01
-vendor/firmware/cppf.b02
-vendor/firmware/cppf.b03
-vendor/firmware/cppf.b04
-vendor/firmware/cppf.b05
-vendor/firmware/cppf.b06
-vendor/firmware/cppf.b07
-vendor/firmware/cppf.mdt
-
 # Soter - from Nokia DRG_sprout 10 QKQ1.190828.002 00WW_4_040 release-keys
 product/framework/vendor.qti.hardware.soter-V1.0-java.jar|e0a20a638cac4e369a29157ea4aa44b1e5d60f8f
 product/lib64/vendor.qti.hardware.soter@1.0.so|0cc653294e81fd394ccd9dcb368de6bfa0914619
@@ -1403,17 +1375,6 @@ vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|4f7e3c8a6cde9efefd8b9bf440fb
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|9cf774301dfb59173cc2a6871ff851ea6b546f39
 vendor/lib64/vendor.qti.hardware.soter@1.0.so|5815859dc07d3181901596d06612b379e86fe6fd
-
-# Signed graphics firmware
-vendor/firmware/cppf.b00
-vendor/firmware/cppf.b01
-vendor/firmware/cppf.b02
-vendor/firmware/cppf.b03
-vendor/firmware/cppf.b04
-vendor/firmware/cppf.b05
-vendor/firmware/cppf.b06
-vendor/firmware/cppf.b07
-vendor/firmware/cppf.mdt
 
 # TUI - from Nokia Dragon QKQ1.190828.002-00WW_4_040-release-keys
 product/lib/vendor.qti.hardware.tui_comm@1.0.so|313677dd28de6f6b2a5cf8b136d8ce0723bb5a65
@@ -1441,17 +1402,6 @@ vendor/lib/libstreamparser.so
 vendor/lib/libUBWC.so
 vendor/lib64/libstreamparser.so
 vendor/lib64/libUBWC.so
-
-# Widevine firmware
-vendor/firmware/widevine.b00
-vendor/firmware/widevine.b01
-vendor/firmware/widevine.b02
-vendor/firmware/widevine.b03
-vendor/firmware/widevine.b04
-vendor/firmware/widevine.b05
-vendor/firmware/widevine.b06
-vendor/firmware/widevine.b07
-vendor/firmware/widevine.mdt
 
 # Wi-Fi - from Nokia DRG_sprout 10 QKQ1.190828.002 00WW_4_040 release-keys
 vendor/bin/cnss-daemon|3f51988443047eb02ae1607b0d6bd05a4386c2b1
