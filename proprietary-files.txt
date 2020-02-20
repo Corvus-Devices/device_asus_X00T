@@ -871,17 +871,18 @@ vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so
 vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
-# FM - from DRG - QKQ1.190828.002
--product/lib/vendor.qti.hardware.fm@1.0.so|a090651122fcad265ae7562c88dca746f893ad36
--product/lib64/vendor.qti.hardware.fm@1.0.so|fc7ad886f82089edf36509865fadac17a7340f32
-lib/fm_helium.so|feb4819f1898c67dfda4f965d7cc2711c74d1a99
-lib/libfm-hci.so|7700b02faa484ff682c618402f62b86bf8588db2
-lib64/fm_helium.so|bc9f6314528630c060b593cef4a8cec786b22467
-lib64/libfm-hci.so|589e9e290acfa18a49deba33606ed158d5e7f898
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|2087fee60eb44c097ee9e6c93f4c873fff280866
-vendor/lib/vendor.qti.hardware.fm@1.0.so|89a7ec5cc673d13afc73116eccff2e58f218a34d
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|506efd87250697bdae271f86ea472785a77b84ef
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|073cace3aa8d0ffa025d9df67c45f8a907109339
+# FM
+lib/fm_helium.so
+lib/libfm-hci.so
+lib64/fm_helium.so
+lib64/libfm-hci.so
+-product/lib/vendor.qti.hardware.fm@1.0.so
+-product/lib64/vendor.qti.hardware.fm@1.0.so
+vendor/bin/fm_qsoc_patches
+vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
+vendor/lib/vendor.qti.hardware.fm@1.0.so
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Gatekeeper - from DRG - QKQ1.190828.002
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|a189a50515831e6ac9a7e88a165ac979ae6ac077
