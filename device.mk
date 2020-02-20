@@ -350,9 +350,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service-qti
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
-
 # Pre-opt SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
 
