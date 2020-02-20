@@ -28,6 +28,7 @@
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.msm.usb.configfs.rc
 import /vendor/etc/init/hw/init.target.rc
+import /vendor/etc/init/hw/init.asus.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -298,8 +299,8 @@ on post-fs-data
 
     # Mounting of persist is moved to 'on emmc-fs' and 'on fs' sections
     # We chown/chmod /persist again so because mount is run as root + defaults
-    chown root system /persist
-    chmod 0771 /persist
+    chown root system /mnt/vendor/persist/
+    chmod 0771 /mnt/vendor/persist/
     chown system system /persist/WCNSS_qcom_wlan_nv.bin
     chmod 0664 /sys/devices/platform/msm_sdcc.1/polling
     chmod 0664 /sys/devices/platform/msm_sdcc.2/polling
@@ -419,11 +420,11 @@ service qcomsysd /system/vendor/bin/qcom-system-daemon
     group root diag oem_2901
     disabled
 
-on property:persist.vendor.qcomsysd.enabled=1
-    enable qcomsysd
+#on property:persist.vendor.qcomsysd.enabled=1
+#    enable qcomsysd
 
-on property:persist.vendor.qcomsysd.enabled=0
-    stop qcomsysd
+#on property:persist.vendor.qcomsysd.enabled=0
+#    stop qcomsysd
 
 service vendor.ssr_setup /system/vendor/bin/ssr_setup
     oneshot
@@ -522,6 +523,7 @@ service qcom-c_core-sh  /vendor/bin/init.qcom.class_core.sh
     class core
     user root
     oneshot
+    disabled
 
 service qcom-c_main-sh /vendor/bin/init.class_main.sh
     class main
@@ -717,18 +719,20 @@ service ssgqmigd /vendor/bin/ssgqmigd
     user radio
     group radio gps system
     socket ssgqmig seqpacket 0660 radio inet
+    disabled
 
-service ssgtzd /vendor/bin/ssgtzd
-    class late_start
-    user system
-    group system
-    socket ssgtzd stream 0660 system inet
+#service ssgtzd /vendor/bin/ssgtzd
+#    class late_start
+#    user system
+#    group system
+#    socket ssgtzd stream 0660 system inet
 
 service mlid /vendor/bin/mlid
     class late_start
     user gps
     group gps
     socket mlid stream 0666 gps gps
+    disabled
 
 service loc_launcher /system/vendor/bin/loc_launcher
     class late_start
@@ -779,6 +783,7 @@ service qvop-daemon /vendor/bin/qvop-daemon
     class late_start
     user system
     group system drmrpc
+    disabled
 
 service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
@@ -917,11 +922,13 @@ service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
     class late_start
     user system
     group system
+    disabled
 
 service esepmdaemon /system/vendor/bin/esepmdaemon
     class core
     user system
     group nfc
+    disabled
 
 on charger
     setprop persist.sys.usb.config mass_storage
@@ -985,6 +992,10 @@ on property:vendor.opengles.version=*
 on property:vendor.gpu.available_frequencies=*
     setprop ro.vendor.gpu.available_frequencies ${vendor.gpu.available_frequencies}
 
+# in case ipacm-diag started, stop it
+on property:init.svc.vendor.ipacm-diag=running
+    stop vendor.ipacm-diag
+
 service vendor.audio-hal-2-0 /vendor/bin/hw/android.hardware.audio@2.0-service
     override
     class hal
@@ -1001,11 +1012,3 @@ service vendor.audio-hal-2-0 /vendor/bin/hw/android.hardware.audio@2.0-service
     interface android.hardware.audio@5.0::IDevicesFactory default
     interface android.hardware.audio@4.0::IDevicesFactory default
     interface android.hardware.audio@2.0::IDevicesFactory default
-
-service vendor.contexthub-hal-1-0 /vendor/bin/hw/android.hardware.contexthub@1.0-service
-    override
-    class hal
-    interface android.hardware.contexthub@1.0::IContexthub default
-    user system
-    group system
-    disabled

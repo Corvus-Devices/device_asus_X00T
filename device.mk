@@ -366,6 +366,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
+    init.asus.rc \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
@@ -376,11 +377,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sensors.sh \
     init.qcom.sh \
     init.qcom.usb.sh \
-    init.qti.ims.sh \
-    move_time_data.sh \
-    move_wifi_data.sh \
-    fix_baseband.sh \
-    poop.sh
+    fix_baseband.sh
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
